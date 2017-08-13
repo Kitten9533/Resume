@@ -1,0 +1,155 @@
+<!DOCTYPE>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>姜嘉豪的简介</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.section .avatar{width: 100px;height: 100px;border-radius: 100px;}
+/*.section .box1{margin-top: 60px;}*/
+.section table{ border:none;}
+.section table td{color: #fff;}
+.section .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{border:none;}
+.section .introduction{width: 60%;}
+.section2 div.box1, .section2 p { position: relative; left: -120%;}
+.section3 p { position: relative; bottom: -120%;}
+.section4 p { display: none;}
+.section5 p {font-size: 30px;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{border-color:#fff;}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span{background:#fff;}
+</style>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90', '#1bbc9b'],
+		navigation: true,
+		scrollingSpeed: 400,
+		afterLoad: function(anchorLink, index){
+			if(index == 2){
+				$('.section2').find('p').delay(300).animate({
+					left: '0'
+				},1500, 'easeOutExpo');
+			}
+			if(index == 3){
+				$('.section3').find('p').delay(300).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 4){
+				$('.section4').find('p').fadeIn(1000);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				$('.section2').find('p').delay(300).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.section3').find('p').delay(300).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '4'){
+				$('.section4').find('p').fadeOut(1000);
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Kitten9533</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">个人简介</a></li>
+            <li><a href="#skill">专业技能</a></li>
+            <li><a href="#work">工作经历</a></li>
+            <li><a href="#prject">项目经验</a></li>
+            <li><a href="#contact">联系方式</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+	</nav>
+	<section id="dowebok">
+		<div class="section section1">
+			<h3><img src="imgs/avatar.png" class="avatar"></h3>
+			<div class="box1">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<table class="table">
+							<tr>
+								<td width="100" class="text-right">姓名：</td>
+								<td class="text-left">姜嘉豪</td>
+								<td class="text-left introduction">我有时间概念，能在约定时间内保证完成任务。喜欢专研在工作中碰到的技术。</td>
+							</tr>
+							<tr>
+								<td width="100" class="text-right">手机：</td>
+								<td class="text-left">18868195887</td>
+								<td class="text-left introduction" rowspan="2">精通HTML、CSS，JavaScript、Ajax、DOM等前端技术，熟悉页面架构和布局。良好的沟通能力以及团队协作能力，富有责任感，学习能力强，能承受一定的工作压力。</td>
+							</tr>
+							<tr>
+								<td width="100" class="text-right">邮箱：</td>
+								<td class="text-left">1173860556@qq.com</td>
+<!-- 								<td class="text-left introduction" rowspan="2"></td> -->
+							</tr>
+							<tr>
+								<td width="100" class="text-right">所在地：</td>
+								<td class="text-left">浙江-杭州</td>
+								<td class="text-left introduction" rowspan="2">一年半前端开发经验，能熟练开发符合 W3C 标准的页面，熟练使用 jQuery 框架。
+有良好的编码习惯。
+有 Linux 基础，对服务器端开发有一定了解，能够配合后端程序员完成相关工作。
+</td>
+							</tr>
+							<tr>
+								<td width="100" class="text-right">毕业学校：</td>
+								<td class="text-left">浙江农林大学</td>
+								<!-- <td class="text-left introduction" rowspan="2"></td> -->
+							</tr>
+							<tr>
+								<td width="100" class="text-right">GitHub：</td>
+								<td class="text-left"><a aria-hidden="true" href="https://github.com/Kitten9533" target="_blank">Kitten9533</a></td>
+								<td class="text-left introduction">能使用vue全家桶进行开发，熟悉npm模块，了解nodejs，写过一段时间的.net。能使用yui等工具对页面进行优化。</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section2">
+			<h3>第二屏</h3>
+			<p>滚动到第二屏后的回调函数执行的效果</p>
+		</div>
+		<div class="section section3">
+			<h3>第三屏</h3>
+			<p>滚动到第三屏后的回调函数执行的效果</p>
+		</div>
+		<div class="section section4">
+			<h3>第四屏</h3>
+			<p>滚动到第四屏后的回调函数执行的效果</p>
+		</div>
+		<div class="section section5">
+			<h3>联系方式</h3>
+			<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;18868195887</p>
+			<p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;1173860556@qq.com</p>
+		</div>
+	</section>
+</body>
+</html>
