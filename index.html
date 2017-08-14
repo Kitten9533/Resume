@@ -27,13 +27,13 @@
         }
 
         .index-one::after {
-            background: #1bbc9b;
+            background: #1bbc9b !important;
         }
         .index-two::after {
-            background: #4BBFC3;
+            background: #4BBFC3 !important;
         }
         .index-three::after {
-            background: #7BAABE;
+            background: #7BAABE !important;
         }
 
          .navbar-nav > li > a:hover::after {
@@ -308,6 +308,7 @@
                     else if (index == 5) {
                         $('.section5').find('p').fadeIn(1000);
                     }
+                    changeA(index);
                 },
                 onLeave: function (index, direction) {
                     if (index == '3') {
